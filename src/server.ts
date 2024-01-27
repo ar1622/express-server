@@ -3,6 +3,7 @@ import { Server } from 'http'
 import { Collection, MongoClient } from 'mongodb'
 import app from './app'
 import config from './config'
+import logger from './shared/logger'
 import { ILesson } from './app/modules/lesson/lesson.interface'
 import { IOrder } from './app/modules/order/order.interface'
 
@@ -33,7 +34,7 @@ async function main() {
 
     console.log('🟢 Database connected successfully')
   } catch (error) {
-    console.log('🔴 Something wrong here', error)
+    logger.error('🔴 Something wrong here', error)
     process.exit(1)
   }
 }
@@ -42,7 +43,7 @@ function stopServer() {
   if (server) {
     server.close(() => {
       client.close() // Close the MongoDB client when shutting down
-      console.log('🔴 Server closed')
+      logger.info('🔴 Server closed')
       process.exit(0)
     })
   }

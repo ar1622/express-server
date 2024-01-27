@@ -16,7 +16,6 @@ exports.orderCollection = exports.lessonCollection = void 0;
 const mongodb_1 = require("mongodb");
 const app_1 = __importDefault(require("./app"));
 const config_1 = __importDefault(require("./config"));
-const logger_1 = __importDefault(require("./shared/logger"));
 let server;
 const client = new mongodb_1.MongoClient(config_1.default.mongoURI);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -39,7 +38,7 @@ function main() {
             console.log('🟢 Database connected successfully');
         }
         catch (error) {
-            logger_1.default.error('🔴 Something wrong here', error);
+            console.log('🔴 Something wrong here', error);
             process.exit(1);
         }
     });
@@ -48,7 +47,7 @@ function stopServer() {
     if (server) {
         server.close(() => {
             client.close(); // Close the MongoDB client when shutting down
-            logger_1.default.info('🔴 Server closed');
+            console.log('🔴 Server closed');
             process.exit(0);
         });
     }
