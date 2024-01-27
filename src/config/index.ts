@@ -6,6 +6,6 @@ dotenv.config({ path: path.join(process.cwd(), '.env') })
 
 export default {
   env: process.env.NODE_ENV || 'development',
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 1337,
   mongoURI: process.env.MONGODB_URI,
 }
