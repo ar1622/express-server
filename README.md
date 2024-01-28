@@ -1,4 +1,4 @@
-# Details information of Vue.js and Express.js applications.
+# Details information about Vue.js and Express.js applications.
 
 ## Vue.js App
 
