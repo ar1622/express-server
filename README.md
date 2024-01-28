@@ -1,26 +1,25 @@
-
 # Details information of Vue.js and Express.js applications.
-
 
 ## Vue.js App
 
 ### GitHub Repository
-[Vue.js App Repository](https://github.com/your-username/vue-app)
+
+[Vue.js App Repository](https://github.com/ar1622/vue.js-app)
 
 ### Live Demo (GitHub Pages)
-[Vue.js App Live Demo](https://your-username.github.io/vue-app)
+
+[Vue.js App Live Demo](https://ar1622.github.io/vue.js-app/)
 
 ## Express.js App
 
 ### GitHub Repository
-[Express.js App Repository](https://github.com/your-username/express-app)
+
+[Express.js App Repository](https://github.com/ar1622/express-server)
 
 ## Aws express.js App
 
-### GitHub Repository
-[Was express.js App Repository](https://github.com/your-username/was-wcpress-app)
-
 ### Aws Route for Lessons
+
 The app exposes a route to retrieve all lessons.
 
 **Route:**
